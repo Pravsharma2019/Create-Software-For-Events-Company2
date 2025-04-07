@@ -1,0 +1,180 @@
+Private Sub CommandButton1_Click()
+'Validation
+If Me("TextBox1") = "" Then
+MsgBox "Please Enter Day."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox2") = "" Then
+MsgBox "Please Enter State."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox3") = "" Then
+MsgBox "Please Enter Town."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox4") = "" Then
+MsgBox "Please Enter Dealer."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox5") = "" Then
+MsgBox "Please Enter Sub Dealer."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox6") = "" Then
+MsgBox "Please Enter Date."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+
+If Me("TextBox7") = "" Then
+MsgBox "Please Enter Location."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox8") = "" Then
+MsgBox "Please Enter Area Incharge."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox9") = "" Then
+MsgBox "Please Enter Contact Person Name."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox10") = "" Then
+MsgBox "Please Enter Contact Number."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox11") = "" Then
+MsgBox "Please Enter Activity Start Time."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox12") = "" Then
+MsgBox "Please Enter Activity End Time."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox13") = "" Then
+MsgBox "Please Enter Area."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox14") = "" Then
+MsgBox "Please Enter Total Enquiry Target."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox15") = "" Then
+MsgBox " Please Enter Actual Total Enquiry."
+TextBox1.SetFocus
+Exit Sub
+End If
+
+If Me("TextBox16") = "" Then
+MsgBox " Please Enter Total TR Target."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox17") = "" Then
+MsgBox " Please Enter Actual Total TR ."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox18") = "" Then
+MsgBox " Please Enter Booking ."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox19") = "" Then
+MsgBox " Please Enter Retail ."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox20") = "" Then
+MsgBox " Please Enter Exchange ."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox21") = "" Then
+MsgBox " Please Enter Hot Enquiry ."
+TextBox1.SetFocus
+Exit Sub
+End If
+If Me("TextBox22") = "" Then
+MsgBox " Please Enter Remarks ."
+TextBox1.SetFocus
+Exit Sub
+End If
+'Data Transfer To Sheet
+Datarow = Sheet1.Range("A9999").End(xlUp).Row + 1
+For DataCol = 1 To 22
+Sheet1.Cells(Datarow, DataCol) = Me("TextBox" & DataCol).Value
+Next DataCol
+Unload Me
+FRM_Party.Show
+
+End Sub
+
+Private Sub CommandButton2_Click()
+Unload Me
+FRM_Party.Show
+
+End Sub
+
+Private Sub Frame1_Click()
+
+End Sub
+
+Private Sub Label12_Click()
+
+End Sub
+
+Private Sub Label24_Click()
+
+End Sub
+
+Private Sub TextBox1_Change()
+
+End Sub
+
+Private Sub TextBox23_Change()
+
+End Sub
+
+Private Sub TotalColumnNo_Change()
+
+End Sub
+
+Private Sub UserForm_Click()
+
+
+
+
+End Sub
+
+Private Sub UserForm_Initialize()
+TotalColumnNo = Sheet1.Range("xfd1").End(xlToLeft).Column
+Tolfield = Sheet1.Range("xfd1").End(xlToLeft).Column
+
+
+End Sub
+
